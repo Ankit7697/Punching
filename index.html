@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Mode Toggle -->
+    <div class="mode-toggle">
+        <div class="mode-btn modem2"></div>
+        <p class="mode-label">☀</p>
+    </div>
+
+    <!-- Main Heading -->
+    <h1>Attendance Sheet</h1>
+
+    <!-- Input Container -->
+    <div class="container">
+        <div class="input-nav">
+            <input type="text" id="codein" placeholder="Code">
+            <input type="text" id="namein" placeholder="Name">
+            <button class="btn add-btn">Add</button>
+        </div>
+
+        <!-- Attendance Controls -->
+        <div class="attendance-nav">
+            <button class="spa" onclick="goPrev()"></button>
+            <input type="date" class="idate" id="datePicker">
+            <button class="spa2" onclick="goNext()"></button>
+            <p id="currentDateDisplay">Date</p>
+            <select class="Tin">
+                <option value="09:00">09:00</option>
+                <option value="09:30">09:30</option>
+            </select>
+            <select class="Tout">
+                <option value="17:00">17:00</option>
+                <option value="17:30">17:30</option>
+            </select>
+            <button class="subtn" onclick="submitAttendance()">Submit</button>
+        </div>
+
+        <!-- Attendance Table -->
+        <div class="attendance-table">
+            <div class="table-header">
+                <p>Code</p>
+                <p>Name</p>
+                <p>IN</p>
+                <p>OUT</p>
+            </div>
+            <div class="table-body" id="attendanceData"></div>
+        </div>
+    </div>
+
+    <!-- New Page Button -->
+    <button class="new-page" onclick="openNewPage()">New Page</button>
+
+    <!-- Credits -->
+    <p class="credit">Made by Ankit</p>
+
+    <script src="script.js"></script>
+</body>
+                  </html>
